@@ -8,23 +8,31 @@ namespace TP2
         {
             InitializeComponent();
         }
-
+        private void TDni_KeyPress(object  sender, KeyPressEventArgs e){
+            // probar if original,sino probar : "!double.TryParse(this.TDni.Text, out parseValue)"
+             if(!char.IsControl(e.keyChar) && !char.IsDigit(e.KeyChar)){
+                  e.Handled=true
+             }
+        }
+        private void TApellido_KeyPress(object  sender, KeyPressEventArgs e){
+            //probar, si funciona, en caso de ser asi hacer lo mismo con TNombre 
+             if(input.All(c => char.IsLetter(c) || c == ' '){
+                  e.Handled=true
+             }
+        }
         private void TGuardar_Click(object sender, EventArgs e)
         {
             double parseValue;
-            bool DNIValidate = !double.TryParse(this.TDni.Text, out parseValue);
+         
             MsgBoxResult ask;
 
 
 
-            inputValidation(DNIValidate, "DNI", this.TDni);
-            inputValidation(!this.ValidateString(this.TApellido.Text), "Apellido", this.TApellido);
-            inputValidation(!this.ValidateString(this.TNombre.Text), "Nombre", this.TNombre);
-
+            
 
             this.LModificar.Text = this.TNombre.Text + " " + this.TApellido.Text;
 
-            if (this.TApellido.Text == "" || this.TApellido.Text == "" || this.TApellido.Text == "")
+            if (this.TApellido.Text == "" || this.TApellido.Text == "" || this.TDNI.Text == "")
             {
                 MessageBox.Show("el formulario no puede contener campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
