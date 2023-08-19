@@ -80,7 +80,6 @@
             LApellido.Size = new Size(51, 15);
             LApellido.TabIndex = 3;
             LApellido.Text = "Apellido";
-            
             // 
             // LNombre
             // 
@@ -98,15 +97,19 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(100, 23);
             TNombre.TabIndex = 5;
+           
+            TNombre.KeyPress += TNombre_KeyPress;
             // 
             // TDni
             // 
             TDni.AccessibleName = "TDni";
             TDni.Location = new Point(134, 186);
             TDni.Name = "TDni";
+            TDni.RightToLeft = RightToLeft.No;
             TDni.Size = new Size(100, 23);
             TDni.TabIndex = 6;
-         
+       
+            TDni.KeyPress += TDni_KeyPress;
             // 
             // TApellido
             // 
@@ -115,6 +118,7 @@
             TApellido.Name = "TApellido";
             TApellido.Size = new Size(100, 23);
             TApellido.TabIndex = 7;
+            TApellido.KeyPress += TApellido_KeyPress;
             // 
             // TGuardar
             // 
@@ -155,10 +159,11 @@
             Controls.Add(LNya);
             Name = "Form1";
             Text = "pequeño formulario";
-           
             ResumeLayout(false);
             PerformLayout();
         }
+
+    
 
         #endregion
 
