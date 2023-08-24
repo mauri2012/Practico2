@@ -40,7 +40,7 @@ namespace TP2
 
         private void TEliminar_Click(object sender, EventArgs e)
         {
-            MsgBoxResult ask = (MsgBoxResult)MessageBox.Show("Está apunto de eliminar el Cliente: " + LModificar.Text, "Confirmar Eliminación", MessageBoxButtons.NoYes, MessageBoxIcon.Exclamation);
+            MsgBoxResult ask = (MsgBoxResult)MessageBox.Show("Está apunto de eliminar el Cliente: " + LModificar.Text, "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             if (ask == MsgBoxResult.Yes)
             {
