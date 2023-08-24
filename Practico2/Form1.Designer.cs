@@ -97,7 +97,7 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(100, 23);
             TNombre.TabIndex = 5;
-           
+            TNombre.TextChanged += TNombre_TextChanged;
             TNombre.KeyPress += TNombre_KeyPress;
             // 
             // TDni
@@ -108,7 +108,6 @@
             TDni.RightToLeft = RightToLeft.No;
             TDni.Size = new Size(100, 23);
             TDni.TabIndex = 6;
-       
             TDni.KeyPress += TDni_KeyPress;
             // 
             // TApellido
@@ -163,7 +162,7 @@
             PerformLayout();
         }
 
-    
+
 
         #endregion
 

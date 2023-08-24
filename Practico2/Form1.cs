@@ -36,11 +36,11 @@ namespace TP2
         }
 
 
- 
+
 
         private void TEliminar_Click(object sender, EventArgs e)
         {
-            MsgBoxResult ask = (MsgBoxResult)MessageBox.Show("Está apunto de eliminar el Cliente: " + LModificar.Text, "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            MsgBoxResult ask = (MsgBoxResult)MessageBox.Show("Está apunto de eliminar el Cliente: " + LModificar.Text, "Confirmar Eliminación", MessageBoxButtons.NoYes, MessageBoxIcon.Exclamation);
 
             if (ask == MsgBoxResult.Yes)
             {
@@ -65,9 +65,9 @@ namespace TP2
                 e.Handled = true;
                 MessageBox.Show("El campo DNI solo acepta valores numericos", "Error Nombre", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        
 
-    }
+
+        }
         private void TNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back)
@@ -97,5 +97,9 @@ namespace TP2
 
         }
 
+        private void TNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
